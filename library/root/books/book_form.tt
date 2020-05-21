@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+
+</style>
+<form  method="post" action="[% c.uri_for('create_book') %]">
+    Book Title: <input class="col-sm-2 col-form-label"  type="text" name="name" /> 
+    <br>
+    Book Author: <input class="col-sm-2 col-form-label" type="text" name="author"/>
+    <input class="btn btn-primary" type="submit" value="submit">
+</form>

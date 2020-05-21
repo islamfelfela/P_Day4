@@ -1,0 +1,46 @@
+<style>
+    table {
+        font-family: tahoma, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td,
+    th {
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #ccc;
+    }
+    h1{
+        color:white;
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<h1 >Library Books</h1>
+<a class="btn btn-primary" href="[% c.uri_for('add') %]"> Add Book</a>
+<table style="background-color:gray; width: 60%;">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+    </tr>
+    [% FOREACH book IN books %]
+    <tr>
+        <td>
+            [% book.id %]
+        </td>
+        <td>
+            [% book.name %]
+        </td>
+        <td>
+            [% book.author %]
+        </td>
+        <td>
+            <a class="btn btn-danger" href="[% c.uri_for(c.controller.action_for('delete'), [book.id]) %]">Delete</a>
+        </td>
+    </tr>
+    [% END %]
+</table>

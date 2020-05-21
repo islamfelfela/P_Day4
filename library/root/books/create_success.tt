@@ -1,0 +1,3 @@
+<h3>Book Added successfully</h3>
+<h4>Book Title: [% book.name %]</h4>
+<a class="btn btn-success" href="[% c.uri_for('list') %]"> List Books</a>
